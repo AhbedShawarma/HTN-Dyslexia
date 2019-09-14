@@ -1,0 +1,28 @@
+-use the same location when using multiple azure services
+-same with resource group
+
+-api key: authentication and billing purposes
+-endpoint: send all of your calls to
+
+demo code:
+github.com/geektrainer/ai-workshop-starter/tree/solution
+- translation
+- computer vision
+- face recognition
+
+
+python code:
+libraries:
+os, base64, json, requests
+
+from dotenv import load_dotenv <- makes all variables environmental (so all keys and passwords are not availble on github)
+- fill out the .env file with all your keys
+
+grabbing frameworks for azure libraries:
+
+// create credential object w/key
+// create cliend object w/endpoint
+
+web template studio: vs code extension
+
+
