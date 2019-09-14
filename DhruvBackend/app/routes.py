@@ -1,13 +1,16 @@
 from app import app
 from flask import render_template, jsonify, request
 
+text = ""
+
 @app.route('/')
 def home():
     return render_template("index.html")
 
 @app.route('/finished')
-def finsihed():
-    return "HELLO"
+def finished():
+    print ("HELLO")
+    return ("Hello")
 
 @app.route('/index')
 def index():
@@ -39,7 +42,8 @@ def index():
     
     # Checks result.
     if result.reason == speechsdk.ResultReason.RecognizedSpeech:
-        print("Recognized: {}".format(result.text))
+        # text = result.text;
+        print("Recognized: {}".format(result.text)
     elif result.reason == speechsdk.ResultReason.NoMatch:
         print("No speech could be recognized: {}".format(result.no_match_details))
     elif result.reason == speechsdk.ResultReason.Canceled:
