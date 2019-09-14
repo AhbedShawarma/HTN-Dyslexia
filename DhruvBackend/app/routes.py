@@ -1,7 +1,7 @@
 from app import app
 from flask import render_template, jsonify, request
 
-text = ""
+global text
 
 @app.route('/')
 def home():
@@ -42,8 +42,8 @@ def index():
     
     # Checks result.
     if result.reason == speechsdk.ResultReason.RecognizedSpeech:
-        # text = result.text;
-        print("Recognized: {}".format(result.text)
+        text = result.text
+        print("Recognized: {}".format(text))
     elif result.reason == speechsdk.ResultReason.NoMatch:
         print("No speech could be recognized: {}".format(result.no_match_details))
     elif result.reason == speechsdk.ResultReason.Canceled:
