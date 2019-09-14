@@ -1,9 +1,12 @@
 from app import app
+from flask import render_template
 
 @app.route('/')
-@app.route('/index')
+def home():
+    return render_template("index.html")
+
+@app.route('/button')
 def index():
-        
     # Copyright (c) Microsoft. All rights reserved.
     # Licensed under the MIT license. See LICENSE.md file in the project root for full license information.
     
