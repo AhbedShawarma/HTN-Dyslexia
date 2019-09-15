@@ -1,28 +1,66 @@
-﻿html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 160px !important; /* Height of the footer */
+﻿*{
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  scroll-behavior: auto;
+  margin: 0;
+  padding: 0;
+  height: 100%;
   width: 100%;
-  height: 160px; /* Set the fixed height of the footer here */
+  background-color: '#DEC6D5';
 }
 
-/* Override Bootstrap Styling */
-
-.btn-primary {
-  background-color: #025fce !important;
+.container {
+  flex: 1;
+  padding: 0 1rem;
+  margin: 0;
+  background-color: '#DEC6D5';
+  width: 100%;
+  height: 100%;
 }
 
-button:focus,
-button:active {
-  outline: none !important;
-  box-shadow: none !important;
+@font-face {
+  font-family: "IkarosR";
+  src: url('Ikaros-Regular.otf');
+}
+
+@font-face {
+  font-family: "IkarosL";
+  src: url('Ikaros-Light.otf');
+}
+
+.nav {
+  background-color: var(--off-white);
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+}
+
+.nav .nav-content {
+  max-width: 900px;
+  padding: 0rem 3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  display: inline;
+  margin-left: 2rem;
+  color: #333;
+}
+
+.nav-item:hover {
+  color: black;
+  cursor: pointer;
 }
